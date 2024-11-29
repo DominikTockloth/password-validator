@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(222, 222, 219);
+}
+
+.validator-box {
+    width: 400px;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 30px;
+    box-shadow: 7px 8px 11px 1px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin: 0;
+    font-size: 35px;
+    color: rgb(24, 24, 24);
+    text-align: center;
+}
+
+.input-box {
+    width: 100%;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 16px;
+    font-size: 18px;
+    border-color: rgb(28, 28, 28);
+
+    ::placeholder {
+        color: rgb(28, 28, 28);
+        font-size: 25px;
+    }
+}
+
+img {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 20px;
+    background-color: rgb(180, 180, 180);
+}
