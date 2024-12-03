@@ -13,16 +13,23 @@
     <section class="main">
         <div class="validator-box">
             <h1>Password Validator</h1>
-            <div class="input-box"><input type="password" id="input"  oninput="validatePassword(this.value)"><span class="placeholder onBlur" id="placeholder">Password</span><img
-                    src="img/visible.png" class="img"></div>
+            <div class="input-box">
+                <input type="password" id="input" oninput="validatePassword(this.value)" placeholder=" " required>
+                <label for="input" class="placeholder">Password</label>
+                <img src="img/visible.png" class="img" id="toggleBtn" onclick="togglePasswordVisibility()">
+            </div>
             <div class="progress">
                 <div class="progress-bar" id="progress-bar"></div>
             </div>
             <div class="validators">
-                <div class="content"><img src="img/cancel.png" class="cancel" data-criteria="lowercase-uppercase"><span>Lowercase & Uppercase</span></div>
-                <div class="content"><img src="img/cancel.png" class="cancel" data-criteria="number"><span>Number (0-9)</span></div>
-                <div class="content"><img src="img/cancel.png" class="cancel" data-criteria="special-character"><span>Special Character(!@?&$#%)</span></div>
-                <div class="content"><img src="img/cancel.png" class="cancel" data-criteria="min-length"><span>At least 8 Character</span></div>
+                <div class="content"><img src="img/cancel.png" class="cancel"
+                        data-criteria="lowercase-uppercase"><span>Lowercase & Uppercase</span></div>
+                <div class="content"><img src="img/cancel.png" class="cancel" data-criteria="number"><span>Number
+                        (0-9)</span></div>
+                <div class="content"><img src="img/cancel.png" class="cancel"
+                        data-criteria="special-character"><span>Special Character(!@?&$#%)</span></div>
+                <div class="content"><img src="img/cancel.png" class="cancel" data-criteria="min-length"><span>At least
+                        8 Character</span></div>
             </div>
         </div>
     </section>

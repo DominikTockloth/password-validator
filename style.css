@@ -43,30 +43,41 @@ input {
     border-radius: 10px;
     box-sizing: border-box;
     padding: 16px;
-    font-size: 25px;
+    font-size: 18px;
     border-color: rgb(28, 28, 28);
     outline: none;
+
 }
 
+/* Style for the label acting as placeholder */
 .placeholder {
     position: absolute;
-    left: 12px;
+    top: 13px;
+    left: 16px;
     font-size: 22px;
     font-weight: 600;
+    color: rgb(73, 71, 71);
+    pointer-events: none;
+    /* Prevents interaction */
+    transition: all 0.2s ease-in-out;
+    /* Smooth transition */
+}
+
+/* Move label up when input is focused or has a value */
+input:focus+.placeholder,
+input:not(:placeholder-shown)+.placeholder {
+    top: -10px;
+    font-size: 18px;
     background-color: white;
-}
-
-.onBlur {
-    top: 13px;
-    transition: 125ms ease-in-out;
-    color: rgb(73 71 71);
-}
-
-.onFocus {
-    top: -11px;
-    transform: slideUp 125ms ease-in-out;
+    /* Optional size adjustment */
     color: rgb(173, 102, 241);
 }
+
+/* Optional: Reset the border color when input is focused */
+input:focus {
+    border-color: rgb(173, 102, 241);
+}
+
 
 @keyframes slideUp {
     0% {
@@ -92,6 +103,12 @@ input {
     height: 10px;
     border-radius: 20px;
     background-color: rgb(180, 180, 180);
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
 }
 
 .validators {
